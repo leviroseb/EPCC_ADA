@@ -4,12 +4,11 @@
 using namespace std;
 
 int maxProduct(int A[],int n){
-    int max=0;
     for (int i=1;i<n-1;i++){
         if(A[i]>=A[i+1]){
             swap(A[i],A[i+1]);
         }
-        else if(A[i]<=A[i]){
+        if(A[i]<=A[i-1]){
             swap(A[i],A[i-1]);
         }
     }
@@ -28,7 +27,7 @@ int main(){
     }
 
     producto=maxProduct(A,n);
-    print(A);
+    
 
     cout<<"Producto máximo: "<<producto;
     return 0;
