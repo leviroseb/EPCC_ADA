@@ -8,7 +8,7 @@ void insertSort(int A[], int n){
     for (int j=1;j<n;j++){
         key=A[j];
         int i=j-1;
-        while(i>=0 && A[i]>key){
+        while(i>=0 && A[i]<key){
             A[i+1]=A[i];
             i=i-1;
         }
@@ -21,7 +21,7 @@ int main(){
     int n=6;
     insertSort(A,n);
     for(int i=0;i<n;i++){
-        cout<<A[i];
+        cout<<A[i]<<" ";
     }
     return 0;
 }
